@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Report Form</title>
+</head>
+<body>
+    <h2>Incident Report Form</h2>
+    <form action="/customer/report_incident/<%=CUST_ID%>" method="POST">
+
+
+        <label for="application_id">Application Number:</label><br>
+        <input type="text" id="application_id" name="application_id" required><br><br>
+
+        <label for="incident_inspector">Inspector:</label><br>
+        <input type="text" id="incident_inspector" name="incident_inspector" required><br><br>
+
+        <label for="incident_cost">Incident Cost:</label><br>
+        <input type="number" id="incident_cost" name="incident_cost" required><br><br><br>
+
+        <label for="incident_type">Incident Type:</label><br>
+        <select id="incident_type" name="incident_type" required>
+            <option value="">Select Incident Type</option>
+            <option value="Accident">Accident</option>
+            <option value="Theft">Theft</option>
+            <option value="Automatic">Automatic</option>
+        </select><br><br><br>
+
+        <label for="incident_date">Incident Date:</label><br>
+        <input type="date" id="incident_date" name="incident_date" required><br><br>
+
+        <label for="incident_report_description">Report Description:</label><br>
+        <textarea id="incident_report_description" name="incident_report_description" required></textarea><br><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

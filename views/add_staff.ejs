@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Staff</title>
+</head>
+<body>
+    <h2>Add Staff</h2>
+    <form action="/company/add_staff/<%=companyName%>/<%= DEPARTMENT_NAME %>/<%=officeName%>" method="post">
+        
+        
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName"><br>
+        
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName"><br>
+        
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address"><br>
+        
+        <label for="contact">Contact:</label><br>
+        <input type="text" id="contact" name="contact"><br>
+        
+        <label for="gender">Gender:</label><br>
+        <input type="text" id="gender" name="gender"><br>
+        
+        <label for="maritalStatus">Marital Status:</label><br>
+        <input type="text" id="maritalStatus" name="maritalStatus"><br>
+        
+        <label for="nationality">Nationality:</label><br>
+        <input type="text" id="nationality" name="nationality"><br>
+        
+        <label for="qualification">Qualification:</label><br>
+        <input type="text" id="qualification" name="qualification"><br>
+        
+        <label for="allowance">Allowance:</label><br>
+        <input type="number" id="allowance" name="allowance"><br>
+        
+        <label for="ppsNumber">PPS Number:</label><br>
+        <input type="number" id="ppsNumber" name="ppsNumber"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

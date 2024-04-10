@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>User List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Mobile Number</th>
+                <th>Email</th>
+                <th>Passport Number</th>
+                <th>Marital Status</th>
+                <th>PPS Number</th>
+                <th>Application Apply</th>
+                <th>View Application</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (user of customers) { %>
+                <tr>
+                    <td><%= user.CUST_ID %></td>
+                    <td><%= user.CUST_FNAME %></td>
+                    <td><%= user.CUST_LNAME %></td>
+                    <td><%= user.CUST_DOB %></td>
+                    <td><%= user.CUST_GENDER %></td>
+                    <td><%= user.CUST_ADDRESS %></td>
+                    <td><%= user.CUST_MOB_NUMBER %></td>
+                    <td><%= user.CUST_EMAIL %></td>
+                    <td><%= user.CUST_PASSPORT_NUMBER %></td>
+                    <td><%= user.CUST_MARITAL_STATUS %></td>
+                    <td><%= user.CUST_PPS_NUMBER %></td>
+                    <td>
+                        <form action="/customer/new_application/<%=user.CUST_ID%>" method="get">
+                            <button>Add Application</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/customer/view_applications/<%= user.CUST_ID %>" method="get">
+                            <button type="submit">View Applications</button>
+                        </form>
+                    </td>
+                    
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <hr>
+    <br>
+    <form action="/policy" method="get">
+        <button>View Policies</button>
+    </form>
+    <br>
+    <form action="/customer/add" method="get">
+        <button>Add Customer</button>
+    </form>
+    
+    
+</body>
+</html>

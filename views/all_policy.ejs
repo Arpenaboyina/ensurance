@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Policies</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Policy Number</th>
+                <th>Company Name</th>
+                <th>Department Name</th>
+                <th>Coverage Amount</th>
+                <th>Coverage Type</th>
+                <th>Coverage Level</th>
+                <th>Coverage Description</th>
+                <th>Coverage Terms</th>
+                <th>Return Money</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <% policies.forEach(policy => { %>
+                <tr>
+                    <td><%= policy.COVERAGE_ID %></td>
+                    <td><%= policy.COMPANY_NAME %></td>
+                    <td><%= policy.DEPARTMENT_NAME %></td>
+                    <td><%= policy.COVERAGE_AMOUNT %></td>
+                    <td><%= policy.COVERAGE_TYPE %></td>
+                    <td><%= policy.COVERAGE_LEVEL %></td>
+                    <td><%= policy.COVERAGE_DESCRIPTION %></td>
+                    <td><%= policy.COVERAGE_TERMS %></td>
+                    <td><%= policy.PRODUCT_PRICE %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

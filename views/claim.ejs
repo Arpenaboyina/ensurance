@@ -1,0 +1,37 @@
+<!-- claim.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Claim</title>
+</head>
+<body>
+    <h2>Submit Claim</h2>
+    <form action="/customer/claim/<%= APPLICATION_ID %>" method="POST">
+
+        
+
+        <label for="claim_amount">Claim Amount:</label><br>
+        <input type="number" id="claim_amount" name="claim_amount" required><br><br>
+
+
+        <label for="damage_type">Damage Type:</label><br>
+        <select id="damage_type" name="damage_type" required>
+            <option value="Minor">Minor</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Severe">Severe</option>
+        </select><br><br>
+
+        <label for="incident_type">Incident Type:</label><br>
+    <input type="text" id="incident_type" name="incident_type" required><br><br>
+
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" required></textarea><br><br>
+
+    <label for="incident_date">Incident Date:</label><br>
+    <input type="date" id="incident_date" name="incident_date" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

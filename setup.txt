@@ -1,0 +1,32 @@
+npm init
+npm i express
+npm i uuid
+npm i mysql2
+npm i ejs
+
+
+
+let mysql = require("mysql2");
+let express = require("express");
+let methodOverride = require("method-override");
+let app = express();
+
+app.set("view engine", "ejs");
+
+// Create MySQL connection
+let connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    database: 'project',
+    password: '22bcs007'
+});
+
+app.use(methodOverride("_method"));
+app.use(express.urlencoded({ extended: true }));
+
+
+let port = 8080;
+
+app.listen(port, () => {
+    console.log("Server started");
+});

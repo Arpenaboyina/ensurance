@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create COVERAGE Table</title>
+</head>
+<body>
+
+<h2>Create COVERAGE Table</h2>
+
+<form action="/company/add_coverage/<%=companyName %>/<%= DEPARTMENT_NAME %>" method="post">
+  <label for="COVERAGE_ID">COVERAGE_ID:</label><br>
+  <input type="text" id="COVERAGE_ID" name="COVERAGE_ID" required><br><br>
+  
+  <label for="COVERAGE_AMOUNT">COVERAGE_AMOUNT:</label><br>
+  <input type="text" id="COVERAGE_AMOUNT" name="COVERAGE_AMOUNT"><br><br>
+  
+  <label for="COVERAGE_TYPE">COVERAGE_TYPE:</label><br>
+  <select id="COVERAGE_TYPE" name="COVERAGE_TYPE">
+    <option value="Health">Health</option>
+    <option value="Life">Life</option>
+    <option value="Auto">Auto</option>
+    <option value="Travel">Travel</option>
+  </select><br><br>
+  
+  <label for="COVERAGE_LEVEL">COVERAGE_LEVEL:</label><br>
+  <select id="COVERAGE_LEVEL" name="COVERAGE_LEVEL">
+    <option value="Basic">Basic</option>
+    <option value="Intermediate">Intermediate</option>
+    <option value="Advanced">Advanced</option>
+  </select><br><br>
+  
+  <label for="COVERAGE_DESCRIPTION">COVERAGE_DESCRIPTION:</label><br>
+  <input type="text" id="COVERAGE_DESCRIPTION" name="COVERAGE_DESCRIPTION"><br><br>
+  
+  <label for="COVERAGE_TERMS">COVERAGE_TERMS:</label><br>
+  <input type="text" id="COVERAGE_TERMS" name="COVERAGE_TERMS"><br><br>
+  
+  <label for="PRODUCT_PRICE">Return Amount</label><br>
+  <input type="number" id="PRODUCT_PRICE" name="PRODUCT_PRICE"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

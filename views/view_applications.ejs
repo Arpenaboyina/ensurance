@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Applications</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Applications</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Application ID</th>
+                <th>Vehicle ID</th>
+                <th>Application Status</th>
+                <th>Policy</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (const application of applications) { %>
+                <tr>
+                    <td><%= application.APPLICATION_ID %></td>
+                    <td><%= application.VEHICLE_ID %></td>
+                    <td><%= application.APPLICATION_STATUS %></td>
+                    <td><%= application.POLICY_NUMBER %></td>
+                    <td><%= application.DESCRIPTION %></td>
+                    <td>
+                        <form action="/customer/policy_renew/<%=application.POLICY_NUMBER%>/<%=application.CUST_ID%> /<%= application.APPLICATION_ID %>" method="get">
+                            <button type="submit">Policy Renew </button>
+                        </form>
+                    </td>
+
+                    <td>
+                        <form action="/customer/report_incident/<%=application.CUST_ID%>" method="get">
+                            <button type="submit">Report Incident </button>
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    
+</body>
+</html>
