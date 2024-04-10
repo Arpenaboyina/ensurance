@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px; /* Set the font size to 20 pixels */
+}
+
+form {
+    display: inline-block;
+    margin-right: 10px;
+}
