@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Create Claim Settlement</title>
+</head>
+<body>
+    <h1>Claim Settlement</h1>
+    <form action="/manager/createclaim_settlement" method="POST">
+        <label for="claim_settlement_id">Claim Settlement Id:</label>
+        <input type="text" id="claim_settlement_id" name="claim_settlement_id" maxlength="20"><br>
+
+        <label for="claim_id">Claim Id:</label>
+        <input type="text" id="claim_id" name="claim_id" maxlength="20"><br>
+
+        <label for="customer_id">Customer Id:</label>
+        <input type="text" id="customer_id" name="customer_id" maxlength="20"><br>
+
+        <label for="vehicle_id">Vehicle Id:</label>
+        <input type="text" id="vehicle_id" name="vehicle_id" maxlength="20"><br>
+
+
+        <label for="date_settled">Date Settled:</label>
+        <input type="date" id="date_settled" name="date_settled" ><br>
+
+        <label for="amount_paid">Amount Paid:</label>
+        <input type="int" id="amount_paid" name="amount_paid" ><br>
+
+        <label for="coverage_id">Coverage Id:</label>
+        <input type="text" id="coverage_id" name="coverage_id" maxlength="20"><br>
+
+
+<br>
+        <button type="submit">Create Claim</button>
+    </form>
+</body>
+</html>

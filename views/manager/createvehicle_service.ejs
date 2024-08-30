@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Vehicle Service Form</title>
+</head>
+<body>
+
+<h2>Add Vehicle Service</h2>
+
+<form action="/manager/createvehicle_service" method="post">
+  <label for="vehicle_service">Vehicle Service:</label><br>
+  <input type="text" id="vehicle_service" name="vehicle_service" required><br>
+  
+  <label for="vehicle_id">Vehicle ID:</label><br>
+  <input type="text" id="vehicle_id" name="vehicle_id" required><br>
+  
+  <label for="cust_id">Customer ID:</label><br>
+  <input type="text" id="cust_id" name="cust_id" required><br>
+  
+  <label for="department_name">Department Name:</label><br>
+  <input type="text" id="department_name" name="department_name"><br>
+  
+  <label for="vehicle_service_address">Service Address:</label><br>
+  <input type="text" id="vehicle_service_address" name="vehicle_service_address"><br>
+  
+  <label for="vehicle_service_contact">Service Contact:</label><br>
+  <input type="text" id="vehicle_service_contact" name="vehicle_service_contact"><br>
+  
+  <label for="vehicle_service_incharge">Service Incharge:</label><br>
+  <input type="text" id="vehicle_service_incharge" name="vehicle_service_incharge"><br>
+  
+  <label for="vehicle_service_type">Service Type:</label><br>
+  <input type="text" id="vehicle_service_type" name="vehicle_service_type" required><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

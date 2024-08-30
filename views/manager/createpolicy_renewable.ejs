@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Renewal Information</title>
+</head>
+<body>
+    <h1>Policy Renewal Information</h1>
+    <form action="/manager/createpolicy_renewable" method="POST">
+        <label for="policy_renewable_id">POLICY_RENEWABLE_ID:</label>
+        <input type="text" id="policy_renewable_id" name="policy_renewable_id" maxlength="20" required><br><br>
+
+        <label for="agreement_id">AGREEMENT_ID:</label>
+        <input type="text" id="agreement_id" name="agreement_id" maxlength="20"><br><br>
+
+        <label for="cust_id">CUSTOMER_ID:</label>
+        <input type="text" id="cust_id" name="cust_id" maxlength="20"><br><br>
+        
+        <label for="application_id">APPLICATION_ID:</label>
+        <input type="text" id="application_id" name="application_id" maxlength="20"><br><br>
+
+        <label for="date_of_renewal">DATE_OF_RENEWAL:</label>
+        <input type="date" id="date_of_renewal" name="date_of_renewal"><br><br>
+
+        <label for="type_of_renewal">TYPE_OF_RENEWAL:</label>
+        <input type="text" id="type_of_renewal" name="type_of_renewal"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

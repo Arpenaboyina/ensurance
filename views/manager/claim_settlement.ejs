@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>claim_settlement</title>
+    <link rel="stylesheet" href="/style.css"
+</head>
+<body>
+    <h1>Claim Settlement</h1>
+        
+        <form action="createclaim_settlement" method="GET">
+            <button type="submit">Create Claim Settlement</button>
+        </form>
+    
+        <form action="readclaim_settlement" method="GET"> 
+            <label for="claim_settlement_idRead">Claim Settlement ID:</label>
+            <input type="text" id="claim_settlement_idRead" name="claim_settlement_idRead">
+            <button type="submit">Read Claim Settlement</button>
+        </form>
+
+    
+        <form action="updateclaim_settlement" method="GET">
+            <label for="claim_settlement_id">Claim Settlement ID:</label>
+            <input type="text" id="claim_settlement_id" name="claim_settlement_id">
+            <button type="submit">Update Claim Settlement</button>
+        </form>
+    
+        <form action="deleteclaim_settlement" method="POST">
+            <label for="claim_settlement_idDelete">Claim Settlement Id:</label>
+            <input type="text" id="claim_settlement_idDelete" name="claim_settlement_idDelete">
+            <button type="submit">Delete Claim Settlement</button>
+    </form> 
+</body>
+</html>

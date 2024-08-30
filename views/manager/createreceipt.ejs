@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Information</title>
+</head>
+<body>
+    <h1>Receipt Information</h1>
+    <form action="/manager/createreceipt" method="POST">
+        <label for="receipt_id">RECEIPT_ID:</label>
+        <input type="text" id="receipt_id" name="receipt_id" maxlength="20" required><br><br>
+
+        <label for="premium_payment_id">PREMIUM_PAYMENT_ID:</label>
+        <input type="text" id="premium_payment_id" name="premium_payment_id" maxlength="20"><br><br>
+
+        <label for="cust_id">CUST_ID:</label>
+        <input type="text" id="cust_id" name="cust_id" maxlength="20"><br><br>
+
+        <label for="cost">COST:</label>
+        <input type="number" id="cost" name="cost"><br><br>
+
+        <label for="time">TIME:</label>
+        <input type="date" id="time" name="time"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Update Claim Settlement</title>
+</head>
+<body>
+    <h1>Update Claim Settlement</h1>
+
+    <form action="/manager/updateclaim_settlement" method="POST">
+        <input type="hidden" name="claim_settlement_id" value="<%= claim_settlement.claim_settlement_id %>">
+
+
+        <label for="claim_id">Claim Id:</label>
+        <input type="text" id="claim_id" name="claim_id" value="<%=claim_settlement.claim_id%>" maxlength="20"><br>
+
+
+        <label for="cust_id">Customer Id:</label>
+        <input type="text" id="cust_id" name="cust_id" value="<%= claim_settlement.cust_id %>" maxlength="20"><br>
+
+        <label for="vehicle_id">Vehicle Id:</label>
+        <input type="text" id="vehicle_id" name="vehicle_id" value="<%= claim_settlement.vehicle_id %>"maxlength="20"><br>
+
+        <label for="date_settled">Date Settled:</label>
+        <input type="date" id="date_settled" name="date_settled" value="<%= claim_settlement.date_settled %>"><br>
+
+        <label for="amount_paid">Amount Paid:</label>
+        <input type="number" id="amount_paid" name="amount_paid" value="<%= claim_settlement.amount_paid %>"><br>
+
+        <label for="coverage_id">Coverage Id:</label>
+        <input type="text" id="coverage_id" name="coverage_id" value="<%= claim_settlement.coverage_id %>" maxlength="20"><br>
+
+        
+    
+
+        <button type="submit">Update Claim</button>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<!-- views/Insurance Agent/read-customer.ejs -->
+
+<html>
+<head>
+    <title>Read Customer</title>
+</head>
+<body>
+    <h1>Customer Information</h1>
+    <ul>
+        <li>Customer ID: <%= customer.cust_id %></li>
+        <li>First Name: <%= customer.cust_fname %></li>
+        <li>Last Name: <%= customer.cust_lname %></li>
+        <li>Date of Birth: <%= customer.cust_DOB.toISOString().split('T')[0] %></li>
+        <li>Gender: <%= customer.cust_gender %></li>
+        <li>Mobile Number: <%= customer.cust_mob_number %></li>
+        <li>Email: <%= customer.cust_email %></li>
+        <li>Passport Number: <%= customer.cust_passport %></li>
+        <li>Marital Status: <%= customer.cust_martial_status %></li>
+        <li>Personal Public Number: <%= customer.cust_ppS_number %></li>
+    </ul>
+</body>
+</html>

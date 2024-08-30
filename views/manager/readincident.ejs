@@ -1,0 +1,15 @@
+
+<html>
+<head>
+    <title>Read Incident</title>
+</head>
+<body>
+    <h1>Incident</h1>
+    <ul>
+        <li>Incident ID: <%= incident.INCIDENT_ID %></li>
+        <li>Incident Type: <%= incident.INCIDENT_TYPE %></li>
+        <li>Incident Date: <%= new Date(incident.INCIDENT_DATE).toLocaleString() %></li>
+        <li>Description: <%= incident.DESCRIPTION %></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Policy Renewal</title>
+</head>
+<body>
+    <h1>Update Policy Renewal</h1>
+
+    <form action="/manager/updatepolicy_renewable" method="POST">
+
+        <input type="hidden" name="policy_renewable_id" value="<%= policyRenewal.policy_renewable_id %>">
+<label for="agreement_Id">Agreement ID:</label>
+<input type="text" id="agreement_Id" name="agreement_Id" value="<%= policyRenewal.agreement_id %>" maxlength="20"><br>
+
+
+        <!-- <input type="hidden" name="policyRenewalId" value="<%= policyRenewal.policy_renewable_id %>">
+
+        <label for="agreementId">Agreement ID:</label>
+        <input type="text" id="agreementId" name="agreementId" value="<%= policyRenewal.agreement_id %>" maxlength="20"><br> -->
+
+        <label for="application_Id">Application ID:</label>
+        <input type="text" id="application_id" name="application_id" value="<%= policyRenewal.application_id %>" maxlength="20"><br>
+
+        <label for="customer_id">Customer ID:</label>
+        <input type="text" id="customer_id" name="customer_id" value="<%= policyRenewal.cust_id %>" maxlength="20"><br>
+
+        <label for="date_of_renewal">Date of Renewal:</label>
+        <input type="date" id="date_of_renewal" name="date_of_renewal" value="<%= policyRenewal.date_of_renewal %>"><br>
+
+        <label for="type_of_renewal">Type of Renewal:</label>
+        <input type="text" id="type_of_renewal" name="type_of_renewal" value="<%= policyRenewal.type_of_renewal %>"><br>
+
+        <button type="submit">Update Policy Renewal</button>
+    </form>
+</body>
+</html>

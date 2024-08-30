@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Update Receipt</title>
+</head>
+<body>
+    <h1>Update Receipt</h1>
+
+    <form action="/manager/updatereceipt" method="POST">
+        <input type="hidden" name="receipt_id" value="<%= receipt.receipt_id %>">
+
+
+        <label for="premium_payment_id">Premium Payment Id:</label>
+        <input type="text" id="premium_payment_id" name="premium_payment_id" value="<%=receipt.premium_payment_id%>"><br>
+
+
+        <label for="cust_id">Customer ID:</label>
+        <input type="text" id="cust_id" name="cust_id" value="<%= receipt.cust_id %>"><br>
+
+        <label for="cost">Cost:</label>
+        <input type="number" id="cost" name="cost" value="<%= receipt.cost %>"><br>
+
+        <label for="time">time:</label>
+        <input type="date" id="time" name="time" value="<%= receipt.time %>"><br>
+    
+
+        <button type="submit">Update Receipt</button>
+    </form>
+</body>
+</html>
+
+

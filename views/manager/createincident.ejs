@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Information</title>
+</head>
+<body>
+    <h1>Incident Information</h1>
+    <form action="/manager/createincident" method="POST">
+        <label for="incidentId">INCIDENT_ID:</label>
+        <input type="text" id="incidentId" name="incidentId" maxlength="20" required><br><br>
+
+        <label for="incidentType">INCIDENT_TYPE:</label>
+        <input type="text" id="incidentType" name="incidentType" maxlength="30"><br><br>
+
+        <label for="incidentDate">INCIDENT_DATE:</label>
+        <input type="date" id="incidentDate" name="incidentDate"><br><br>
+
+        <label for="description">DESCRIPTION:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

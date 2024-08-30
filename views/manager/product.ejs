@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="/style.css"
+</head>
+<body>
+    <h1>Product</h1> 
+                
+                 <form action="createproduct" method="GET">
+                        <button type="submit">Create product</button>
+                </form>  
+
+                <form action="readproduct" method="GET"> <!-- Corrected action URL -->
+                    <label for="product_numberRead">Product Number:</label>
+                    <input type="text" id="product_numberRead" name="product_numberRead">
+                    <button type="submit">Read Product</button>
+                </form>
+
+                <form action="updateproduct" method="GET">
+                    <label for="productupdate">Product Number:</label>
+                    <input type="text" id="productupdate" name="productupdate">
+                    <button type="submit">Update Product</button>
+                </from>
+
+                <form action="deleteproduct" method="POST">
+                    <label for="productDelete">Product_Id:</label>
+                    <input type="text" id="productDelete" name="productDelete">
+                    <button type="submit">Delete Product</button>
+                  </form> 
+</body>
+</html>

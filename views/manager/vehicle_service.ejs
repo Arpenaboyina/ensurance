@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Service</title>
+    <link rel="stylesheet" href="/style.css"
+</head>
+<body>
+    <h1>Vehicle Service</h1>
+                <form action="createvehicle_service" method="GET">
+                    <button type="submit">Create Vehicle_Service</button>
+                </form> 
+                
+                <form action="readvehicle_service" method="GET"> <!-- Corrected action URL -->
+                    <label for="vehicle_idRead">Vehicle Id:</label>
+                    <input type="text" id="vehicle_idRead" name="vehicle_idRead">
+                    <button type="submit">Read Vehicle Service</button>
+                </form>
+                <form action="deletevehicle_service" method="POST">
+                    <label for="vehicle_service_idDelete">Vehicle Service Id:</label>
+                    <input type="text" id="vehicle_service_idDelete" name="vehicle_service_idDelete">
+                    <button type="submit">Delete Vehicle Service</button>
+                  </form> 
+</body>
+</html>

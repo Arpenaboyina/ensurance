@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident</title>
+    <link rel="stylesheet" href="/style.css"
+</head>
+<body>
+    <form action="createincident" method="GET">
+        <button type="submit">Create Incident </button>
+    </form> 
+
+ <form action="readincident" method="GET"> <!-- Corrected action URL -->
+  <label for="INCIDENT_IDRead">Incident Id:</label>
+<input type="text" id="INCIDENT_IDRead" name="INCIDENT_IDRead">
+<button type="submit">Read Incident</button>
+</form>
+
+<form action="deleteincident" method="POST">
+<label for="incidentDelete">Incident Id:</label>
+<input type="text" id="incidentDelete" name="incidentDelete">
+<button type="submit">Delete Incident</button>
+</form> 
+
+</body>
+</html>

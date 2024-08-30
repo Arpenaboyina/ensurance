@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="/style.css"
+</head>
+<body>
+    <h1>Receipt</h1>
+                    
+                    <form action="createreceipt" method="GET">
+                        <button type="submit">Create receipt</button>
+                    </form>
+                
+                    <form action="readreceipt" method="GET"> <!-- Corrected action URL -->
+                        <label for="receipt_idRead">Receipt ID:</label>
+                        <input type="text" id="receipt_idRead" name="receipt_idRead">
+                        <button type="submit">Read Receipt</button>
+                    </form>
+            
+                
+                    <form action="updatereceipt" method="GET">
+                        <label for="receipt_id">Receipt ID:</label>
+                        <input type="text" id="receipt_id" name="receipt_id">
+                        <button type="submit">Update Receipt</button>
+                    </form>
+                
+                    <form action="deletereceipt" method="POST">
+                        <label for="receipt_idDelete">Receipt Id:</label>
+                        <input type="text" id="receipt_idDelete" name="receipt_idDelete">
+                        <button type="submit">Delete Receipt</button>
+                </form>
+            
+</body>
+</html>

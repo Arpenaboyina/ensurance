@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Update Customer</title>
+</head>
+<body>
+    <h1>Update Customer</h1>
+
+    <form action="/agent/update-customer" method="POST">
+        <input type="hidden" name="CUST_ID" value="<%= customer.cust_id %>">
+        
+        <label for="CUST_FNAME">First Name:</label>
+        <input type="text" id="CUST_FNAME" name="CUST_FNAME" value="<%= customer.cust_fname %>"><br>
+
+        <label for="CUST_LNAME">Last Name:</label>
+        <input type="text" id="CUST_LNAME" name="CUST_LNAME" value="<%= customer.cust_lname %>"><br>
+
+        <label for="CUST_DOB">Date of Birth:</label>
+        <input type="date" id="CUST_DOB" name="CUST_DOB" value="<%= typeof customer.cust_DOB === 'string' ? customer.cust_DOB.split('T')[0] : customer.cust_DOB.toISOString().split('T')[0] %>"><br>
+
+        <label for="CUST_GENDER">Gender:</label>
+        <select id="CUST_GENDER" name="CUST_GENDER">
+            <option value="M" <% if (customer.cust_gender === 'M') { %>selected<% } %>>Male</option>
+            <option value="F" <% if (customer.cust_gender === 'F') { %>selected<% } %>>Female</option>
+            <option value="O" <% if (customer.cust_gender === 'O') { %>selected<% } %>>Other</option>
+        </select><br>
+
+        <label for="CUST_MOB_NUMBER">Mobile Number:</label>
+        <input type="text" id="CUST_MOB_NUMBER" name="CUST_MOB_NUMBER" value="<%= customer.cust_mob_number %>"><br>
+
+        <label for="CUST_EMAIL">Email:</label>
+        <input type="email" id="CUST_EMAIL" name="CUST_EMAIL" value="<%= customer.cust_email %>"><br>
+
+        <label for="CUST_PASSPORT_NUMBER">Passport Number:</label>
+        <input type="text" id="CUST_PASSPORT_NUMBER" name="CUST_PASSPORT_NUMBER" value="<%= customer.cust_passport_number %>"><br>
+
+        <label for="CUST_MARTIAL_STATUS">Marital Status:</label>
+        <select id="CUST_MARTIAL_STATUS" name="CUST_MARTIAL_STATUS">
+            <option value="Single" <% if (customer.cust_martial_status === 'Single') { %>selected<% } %>>Single</option>
+            <option value="Married" <% if (customer.cust_martial_status === 'Married') { %>selected<% } %>>Married</option>
+            <option value="Divorced" <% if (customer.cust_martial_status === 'Divorced') { %>selected<% } %>>Divorced</option>
+            <option value="Widowed" <% if (customer.cust_martial_status === 'Widowed') { %>selected<% } %>>Widowed</option>
+        </select><br>
+
+        <label for="CUST_PPS_NUMBER">Personal Public Number:</label>
+        <input type="text" id="CUST_PPS_NUMBER" name="CUST_PPS_NUMBER" value="<%= customer.cust_ppS_number %>"><br>
+
+        <button type="submit">Update Customer</button>
+    </form>
+</body>
+</html>

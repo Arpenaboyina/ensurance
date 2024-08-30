@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+</head>
+<body>
+    <h1>Update Product</h1>
+
+    <form action="/manager/updateproduct" method="POST">
+        <input type="hidden" name="product_number" value="<%=product.product_number %>">
+
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="company_name" value="<%= product.company_name %>" maxlength="20"><br>
+
+        <label for="product_price">Product Price:</label>
+        <input type="text" id="product_price" name="product_price" value="<%= product.product_price %>" maxlength="20"><br>
+
+        <label for="product_type">Product Type:</label>
+        <input type="text" id="product_type" name="product_type" value="<%=product.product_type %>" maxlength="20"><br>
+        
+        <button type="submit">Update Product</button>
+    </form>
+</body>
+</html>

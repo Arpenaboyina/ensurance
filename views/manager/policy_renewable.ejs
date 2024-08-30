@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy_Renewable</title>
+    <link rel="stylesheet" href="/style.css"
+</head>
+<body>
+    <h1>Policy Renewable</h1>
+      <form action="createpolicy_renewable" method="GET">
+        <button type="submit">Create Policy_Renewable</button>
+    </form> 
+    
+    <form action="readpolicy_renewable" method="GET"> <!-- Corrected action URL -->
+        <label for="Policy_RenewableRead">Policy_Renewable Id:</label>
+        <input type="text" id="Policy_RenewableRead" name="Policy_RenewableRead">
+        <button type="submit">Read Policy_Renewable</button>
+    </form>
+
+    <form action="updatepolicy_renewable" method="GET">
+        <label for="policy_renewableupdate">policy_renewable ID:</label>
+        <input type="text" id="policy_renewableupdate" name="policy_renewableupdate">
+        <button type="submit">Update policy_renewable</button>
+    </form>
+
+    <form action="deletepolicy_renewable" method="POST">
+        <label for="Policy_RenewableDelete">Vehicle Service Id:</label>
+        <input type="text" id="Policy_RenewableDelete" name="Policy_RenewableDelete">
+        <button type="submit">Delete Policy_Renewable</button>
+      </form> 
+
+
+</body>
+</html>

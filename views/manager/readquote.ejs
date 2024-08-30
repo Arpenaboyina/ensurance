@@ -1,0 +1,22 @@
+<!-- read-quote.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Quote</title>
+</head>
+<body>
+    <h1>Quote Details</h1>
+    <p>Quote ID: <%= quote.quote_id %></p>
+    <p>Application ID: <%= quote.application_id %></p>
+    <p>Customer ID: <%= quote.cust_id %></p>
+    <p>Issue Date: <%= quote.issue_date.toISOString().slice(0,10) %></p>
+    <p>Valid From Date: <%= quote.valid_from_date.toISOString().slice(0,10) %></p>
+    <p>Valid Till Date: <%= quote.valid_till_date.toISOString().slice(0,10) %></p>
+    <p>Description: <%= quote.description %></p>
+    <p>Product ID: <%= quote.product_id %></p>
+    <p>Coverage Level: <%= quote.coverage_level %></p>
+</body>
+</html>

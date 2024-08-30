@@ -1,0 +1,21 @@
+
+
+<html>
+<head>
+    <title>Read Claim</title>
+</head>
+<body>
+    <h1>Claim</h1>
+    <ul>
+        <li>Claim ID: <%= claim.claim_id %></li>
+        <li>Customer ID: <%= claim.cust_id %></li>
+        <li>Agreement ID: <%= claim.agreement_id %></li>
+        <li>Claim Amount: <%= claim.claim_amount %></li>
+        <li>Incident Id: <%= claim.incident_id %></li>
+        <li>Damage Type: <%= claim.damage_type %></li>
+        <li>Claim Date: <%= new Date( claim.date_of_claim).toLocaleString() %></li>
+        <li>Claim Status : <%= claim.claim_status %></li>
+       
+    </ul>
+</body>
+</html>

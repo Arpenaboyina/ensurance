@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Report Information</title>
+</head>
+<body>
+    <h1>Incident Report Information</h1>
+    <form action="/manager/createincident_report" method="POST">
+        <label for="incident_report_id">INCIDENT_REPORT_ID:</label>
+        <input type="text" id="incident_report_id" name="incident_report_id" maxlength="20" required><br><br>
+
+        <label for="incident_id">INCIDENT_ID:</label>
+        <input type="text" id="incident_id" name="incident_id" maxlength="20"><br><br>
+
+        <label for="cust_id">CUST_ID:</label>
+        <input type="text" id="cust_id" name="cust_id" maxlength="20"><br><br>
+
+        <label for="incident_inspector">INCIDENT_INSPECTOR:</label>
+        <input type="text" id="incident_inspector" name="incident_inspector" maxlength="20"><br><br>
+
+        <label for="incident_cost">INCIDENT_COST:</label>
+        <input type="number" id="incident_cost" name="incident_cost"><br><br>
+
+        <label for="incident_type">INCIDENT_TYPE:</label>
+        <input type="text" id="incident_type" name="incident_type" maxlength="10"><br><br>
+
+        <label for="incident_report_description">INCIDENT_REPORT_DESCRIPTION:</label><br>
+        <textarea id="incident_report_description" name="incident_report_description" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

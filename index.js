@@ -1,35 +1,38 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const mysql = require('mysql');
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: true }));
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'Rakesh04@',
+    database: 'DBMS'
+});
 
+connection.connect((err) => {
+    if (err) {
+        console.error('Error connecting to MySQL: ' + err.stack);
+        return; // Removed extra backtick here
+    }
+    console.log('Connected to MySQL as id ' + connection.threadId);
+});
+
+app.set('mysqlConnection', connection);
+
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-const customerRoute = require('./routes/Customer');
-const managerRoute = require('./routes/Manager of Insurance');
-const agentRoute = require('./routes/Insurance Agent');
-const accountantRoute = require('./routes/Accountant');
-const hrRoute = require('./routes/HR Department');
-const inspectorRoute = require('./routes/Damage Inspector');
-const dbAdminRoute = require('./routes/Database Administrator');
-const financeRoute = require('./routes/Finance Department');
+//const agentRoute = require('./routes/insurance Agent'); 
+const managerRoute = require('./routes/manager');
 
-app.use('/customer', customerRoute);
+//app.use('/agent', agentRoute);
 app.use('/manager', managerRoute);
-app.use('/agent', agentRoute);
-app.use('/accountant', accountantRoute);
-app.use('/hr', hrRoute);
-app.use('/inspector', inspectorRoute);
-app.use('/dbadmin', dbAdminRoute);
-app.use('/finance', financeRoute);
-
 
 const PORT = 3000;
 app.listen(PORT, function() {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);``
 });

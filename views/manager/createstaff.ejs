@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Staff Form</title>
+</head>
+<body>
+
+<h2>Add Staff</h2>
+
+<form action="/manager/createstaff" method="post">
+  <label for="staff_id">Staff_ID:</label><br>
+  <input type="text" id="staff_id" name="staff_id" required><br>
+  
+  <label for="company_name">Company_Name:</label><br>
+  <input type="text" id="company_name" name="company_name" required><br>
+  
+  <label for="staff_fname">First_Name:</label><br>
+  <input type="text" id="staff_fname" name="staff_fname" required><br>
+  
+  <label for="staff_lname">Last_Name:</label><br>
+  <input type="text" id="staff_lname" name="staff_lname" required><br>
+  
+  <label for="staff_address">Address:</label><br>
+  <input type="text" id="staff_address" name="staff_address" required><br>
+  
+  <label for="staff_contact">Contact_Number:</label><br>
+  <input type="tel" id="staff_contact" name="staff_contact" required><br>
+  
+  <label for="staff_gender">Gender:</label>
+  <select id="staff_gender" name="cust_gender">
+    <option value="M">M</option>
+    <option value="F">F</option>
+</select><br>
+  
+  
+  <label for="staff_marital_status">Marital_Status:</label>
+  <select id="staff_marital_statusf" name="staff_marital_status">
+    <option value="Single">Single</option>
+    <option value="Married">Married</option>
+    <option value="Divorced">Divorced</option>
+    <option value="Widowed">Widowed</option>
+</select><br>
+  
+  
+  <label for="staff_nationality">Nationality:</label><br>
+  <input type="text" id="staff_nationality" name="staff_nationality" required><br>
+  
+  <label for="staff_qualification">Qualification:</label><br>
+  <input type="text" id="staff_qualification" name="staff_qualification" required><br>
+  
+  <label for="staff_allowance">Allowance:</label><br>
+  <input type="number" id="staff_allowance" name="staff_allowance" required><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

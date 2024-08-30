@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Insurance Policy</title>
+</head>
+<body>
+    <h1>Insurance Policy Details</h1>
+    <ul>
+        <li><strong>AGGREMENT_ID:</strong> <%= policy.aggrement_id %></li>
+        <li><strong>APPLICATION_ID:</strong> <%= policy.application_id %></li>
+        <li><strong>CUST_ID:</strong> <%= policy.cust_id %></li>
+        <li><strong>DEPARTMENT_NAME:</strong> <%= policy.department_name %></li>
+        <li><strong>POLICY_NUMBER:</strong> <%= policy.policy_number %></li>
+        <li><strong>START_DATE:</strong> <%= policy.start_date.toISOString().split('T')[0] %></li>
+        <li><strong>EXPIRY_DATE:</strong> <%= policy.expiry_date.toISOString().split('T')[0] %></li>
+        <li><strong>TERM_CONDITION_DESCRIPTION:</strong> <%= policy.term_condition_description %></li>
+    </ul>
+</body>
+</html>
